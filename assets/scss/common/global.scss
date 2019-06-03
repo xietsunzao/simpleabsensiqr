@@ -1,0 +1,77 @@
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    @include transition(all 300ms ease 0s);
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    @include appearance( unset);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    @include appearance( none);
+    margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    @include box-shadow-input(none);
+}
+
+input[type=checkbox] {
+    @include appearance( checkbox);
+}
+
+input[type=radio] {
+    @include appearance( radio);
+}
+input:-webkit-autofill {
+    @include box-shadow(0 0 0 30px transparent inset);
+    background-color: transparent !important;
+} 
+.clear {
+    clear: both;
+}
+
+h2 {
+    font-size: 20px;
+    color: $black-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding-top: 35px;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.6;
+    color: $black-color;
+    font-weight: 400;
+    font-family: 'Roboto Slab';
+    margin: 0px;
+    background-image: url('../images/body-bg.jpg');
+    background-repeat: no-repeat;
+    @include background-size(cover);
+    background-position: center center;
+}
+
+.main {
+    padding: 95px 0;
+}
+
+.container {
+    width: 850px;
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+    @include box-shadow(0px 5px 9.5px 0.5px rgba(0, 0, 0, 0.1));
+    @include border-radius(10px);
+}

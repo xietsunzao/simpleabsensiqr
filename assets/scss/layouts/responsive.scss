@@ -1,0 +1,90 @@
+@media screen and (max-width: 992px) {
+    .container {
+        width: calc(100% - 40px);
+        max-width: 100%;
+    }
+    .bar-strength {
+        display: none;
+    }
+}
+//end 992px
+@media screen and (max-width: 768px) {
+
+    .steps ul , .form-row{
+        @include flex-direction(column);
+    }
+    .steps ul li:after {
+        width: 0px;
+    }
+    .title {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-row .form-date, .form-row .form-select, .form-file, input, select, textarea, .form-textarea textarea, #signup-form-p-2 #credit_card, #signup-form-p-2 #cvc,
+    #signup-form-p-2 .form-radio-flex, #signup-form-p-2 .form-flex, #signup-form-p-2 .form-group input, .form-row .form-group label {
+        width: 100%;
+    }
+    .form-row .form-group:first-child, .form-row .form-group:last-child {
+        float: none;
+    }
+    input, select, textarea {
+        margin-right: 0px;
+    }
+    .fieldset-content {
+        padding-right: 0px;
+        height: 600px;
+    }
+    .form-group, .form-select, .form-radio, .form-textarea, .form-date {
+        @include flex-direction(column);
+    }
+    label {
+        width: 100%;
+        text-align: left;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    .form-row {
+        padding-left: 0px;
+    }
+}
+
+//end 575px
+@media screen and (max-width: 600px) {
+    #val {
+        width: 99%;
+    }
+    #button {
+        top: 60px;
+        width: 100%;
+    }
+    .fieldset-footer {
+        padding: 78px 0;
+    }
+    .actions ul li a {
+        width: 100px;
+    }
+    .steps ul li {
+        padding-right: 0px;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    .signup-form {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .form-radio-flex input + label {
+        margin-bottom: 20px;
+    }
+    .form-flex {
+        @include flex-direction(column);
+    }
+    .form-date-item #expiry_date, .form-date-item #expiry_year {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .fieldset-content {
+        height: 750px;
+    }
+}
